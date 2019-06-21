@@ -1,3 +1,14 @@
+html {
+  font-size: 16px;
+}
+p {
+  font-size: 1.6rem;
+}
+@media and (max-width: 767px) {
+  html {
+    font-size: 11px;
+  }
+}
 .visually-hidden:not(:focus):not(:active){
 	position: absolute;
 
@@ -761,9 +772,6 @@
 
 /* Секция about us */
 
-.text-size {
-    height: 300px !important
-}
 
 .box {
     padding: 0;
