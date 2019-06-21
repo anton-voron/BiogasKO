@@ -11,7 +11,7 @@ var TextScramble = function () {
     _classCallCheck(this, TextScramble);
 
     this.el = el;
-    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+    this.chars = '!<>-_\\/[]{}—=+*^?#________1234567890';
     this.update = this.update.bind(this);
   }
 
@@ -83,7 +83,7 @@ var TextScramble = function () {
 
 var phrases = ['Hey, there!', 'We creacte', 'something\ awsome \ something cool', 'something greate', 'we care about our planet\'about feature', 'KO BSIOGAS Powerplant', 'join us' , 'lets do this together'];
 
-var el = document.querySelector('.text');
+var el = document.querySelector('.text-transform');
 var fx = new TextScramble(el);
 
 var counter = 0;
@@ -95,3 +95,26 @@ var next = function next() {
 };
 
 next();
+
+
+// MODAL FORMS
+
+const flipperGallery = document.querySelector(".glitch-btn");
+const gallery = document.querySelector(".gallery-show");
+
+flipperGallery.addEventListener("click", showGallery);
+
+function showGallery (evt) {
+  evt.preventDefault();
+  if(flipperGallery.name == "open") {
+    flipperGallery.name = "close";
+    gallery.classList.remove("modal");
+    gallery.classList.add("modal-show");
+  } else {
+    flipperGallery.name = "open";
+    gallery.classList.add("modal");
+    gallery.classList.remove("modal-show");
+  }
+}
+
+console.dir(flipperGallery);
