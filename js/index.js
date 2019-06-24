@@ -118,3 +118,32 @@ function showGallery (evt) {
 }
 
 console.dir(flipperGallery);
+
+
+
+let linkMap = document.querySelector(".button-map");
+let popupMap = document.querySelector(".modal-map");
+let closeMap = popupMap.querySelector(".modal-close");
+let ovelay = document.querySelector(".modal-map-overlay");
+
+linkMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupMap.classList.add("modal-map-show");
+  ovelay.style.display = 'block';
+
+  closeMap.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popupMap.classList.remove("modal-map-show");
+    ovelay.style.display = 'none';
+  })
+});
+
+window.addEventListener("keydown", function(evt) {
+  if(popupMap.classList.contains("modal-map-show")) {
+    if(evt.keyCode==27) {
+      evt.preventDefault();
+      popupMap.classList.remove("modal-map-show");
+      ovelay.style.display = 'none';
+    }
+  };
+})

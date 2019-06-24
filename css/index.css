@@ -40,9 +40,13 @@ html {
 }
 
 /* Text gif  !!!!!!!!!!!*/
+@font-face {
+  font-family: neon;
+  src: url(../Neon.otf);
+}
 
 .website-title {
-    font-family: "Montserrat";
+    font-family: neon;
     text-align: center;
     color: #FFF;
     display: flex;
@@ -773,6 +777,43 @@ html {
     padding: 0;
     margin: 0;
 }
+.about-us {
+    background-color: #1c1c1c;
+    color: #afafaf;
+}
+
+.about-us h2{
+    color: #afafaf;
+}
+
+.elem-parent {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.elem-decor::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    background: #7d7d7d;
+    width: 62px;
+    height: 108px;
+    padding: 0px;
+    opacity: 0.5;
+}
+
+.elem-decor::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background: #00ffb4;
+    width: 40%;
+    height: 5px;
+    padding: 0px;
+}
 
 .article-font {
     font-size: 22px;
@@ -780,16 +821,91 @@ html {
 
 .features {
     background-color: #eeeeee;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
 .wrapper-central {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.contact-section {
+    background-color: #eeeeee; /* Used if the image is unavailable */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    color: #919aa1;
+}
+
+
+
+.wrapper-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.modal-invisiable {
+    position: fixed; /*Так как наши модалки перекрывают весь контент, задаём им position: fixed;*/
+
+    color: #000000;
+
+    background-color: #f8f3f0;
+    background-image: url("../img/bg-section.jpg");
+    background-position: 0 0 ;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); /*Делаем тень 30 пикселей смещаем вниз, 50 пикселей размытие*/
+
+    z-index: 2;
+}
+
+.modal-map {
+    top: 10%;
+    left: 50%;
+
+
+    width: 760px;
+    height: 561px;
+    border: 7px solid white; 
+
+    transform: translateX(-50%);
+
+    display: none;
+}
+.modal-map p{
+    margin: 0; 
+}
+.modal-map-show {
+    display: block;
+    animation-name: mapbounse;
+    animation-duration: 0.6s;
+}
+
+@keyframes mapbounse {
+    0%      { transform: translateY(-2000px); }
+    70%     { transform: translateY(30px);    }
+    90%     { transform: translateY(-10);     }
+    100%    { transform: translateY(0);       }
+}
+
+.modal-map-overlay { /*ДЕЛАЕМ ЗАТЕМНЕНИЕ ЭКРАНА КОГДА ВЫЗЫВАЕТСЯ МОДАЛКА*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
 }

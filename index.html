@@ -6,6 +6,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Vibur&display=swap" rel="stylesheet">
 
 
 
@@ -53,7 +54,7 @@
           <img src="biogas/fabian-moller-401625-unsplash.jpg" alt="" class="img-fluid cut-img">
         </div> -->
         <div class="website-title">
-           <h1>LLC<br/> KO BIOGAS</h1>
+           <h1>llc<br/>ko biogas</h1>
         </div>
     </section>
   </header>
@@ -135,9 +136,9 @@
             </div>
           </div>
       </section>
-      <section class="features">
-        <div class="ml-auto mr-auto text-center m-3">
-          <h2 class="title">What do we offer?</h2>
+      <section class="features p-5">
+        <div class="ml-auto mr-auto text-center">
+            <h2 class="title">What do we offer?</h2>
         </div>
         <div class="container">
           <div class="row">
@@ -165,7 +166,7 @@
             <div class="col-lg-3">
               <div class="info wrapper-central">
                 <div class="icon m-4"><img src="img/icon/electronics.png" alt="" class="img-fluid" width="70" height="70"></div>
-                <h4 class="info-title m-2">Замкнутый цикл</h4>
+                <h4 class="info-title m-2">Умная ферма</h4>
                 <p>Creating your design from scratch with dedicated designers can be very expensive. Using a kit is the best option to start your development while bootstrapping your budget. </p>
               </div>
             </div>
@@ -178,7 +179,9 @@
           <div class="row align-items-center">
             <div class="col-xl-5 box p-5">
               <div class="container">
-                <h2>Спонсор Проекта</h2>
+                <span class="elem-parent">
+                  <h2 class="elem-decor">Спонсор Проекта</h2>
+                </span>
                 <p class="text-sm-justify article-font">
                   группа компаний Вимексим (на рынке зернового 
                   бизнеса  Украины с 2011 года,  экспорт зерновых). 
@@ -190,17 +193,73 @@
               </div>
             </div>
             <div class="col-xl-7 box">
-              <img src="img/marius-masalar-138931-unsplash.jpg" alt="Biogas Description" class="img-fluid">
+              <img src="img/marius-masalar-138931-unsplash.jpg" alt="biogas description" class="img-fluid">
             </div>
           </div>
         </div>
       </section>
+      <div class="contact-section">
+        <section class="row container-fluid">
+        <div class="col-lg-6 p-5 wrapper-left">
+          <div class="contacts-details">
+            <h2>Контактная информация</h2>
+            <p>
+              Компания "KO Biogas" <br>
+              Адрес: г. Санкт-Петербург, Б. Когюшенная, Д. 19/8 <br>
+              Телефон: +7 (495) 666-02-66 <br>
+              Email: i.babich@vimeksim.com
+            </p>
+            <p> 
+              Время работы: <br>
+              Пн/Пт: с 09:00 до 18:00 <br>
+              Сб-Вс: с 09:00 до 18:00
+            </p>
+          </div>
+          <div class="col-md-6">
+            <a href="map.html" class="button-map btn btn-primary btn-lg btn-block"> 
+              ГДЕ СУКА НАС НАЙТИ???? 
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 p-5">
+          <div>
+            <h2>Напишите нам</h2>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="form-group">
+              <div class="">
+                <p>
+                  <label for="name">Ваше имя:</label>
+                  <input class="form-control" type="text" name="user-name" id="name" placeholder="Имя Фамилия" value="">
+                </p>
+                <p>
+                  <label for="email">Ваш e-mail:</label>
+                  <input class="form-control" type="text" name="user-email" id="email" placeholder="email@example.com" value="">
+                </p>
+              </div>
+              <p>
+                <label for="letter">Текст письма:</label>
+                <textarea class="form-control text-area" type="text" name="user-letter" id="letter" placeholder="В свободной форме" value=""></textarea>
+              </p>
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      </div>
+
 
       
   </main>
   <footer class="main-footer">
     
   </footer>
-  <script src="js/index.js"></script>
+
+  <section class="modal-invisiable modal-map">
+    <h2 class="visually-hidden">Как добраться</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.5269427719!2d30.75588901579102!3d46.43825517594017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633f2c02251b5%3A0x142773b2bbecc01c!2z0JPQtdC90YPQtdC30YzQutCwINCy0YPQu9C40YbRjywgMS8yLCDQntC00LXRgdCwLCDQntC00LXRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1suk!2sua!4v1560946371818!5m2!1suk!2sua" width="760" height="561" frameborder="0" style="border:0" allowfullscreen>
+    </iframe>
+    <button class="modal-close" type="button">Закрыть</button>  
+  </section>
+  <div class="modal-map-overlay"></div>
+<script src="js/index.js"></script>
 </body>
 </html>
