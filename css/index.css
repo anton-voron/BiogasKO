@@ -767,12 +767,7 @@ html {
   }
 }
 
-.about-us {
- 
-}
 
-.about-us h2 {
-}
 
 .box {
     padding: 0;
@@ -790,10 +785,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.features h2,
-.features h4 {
 }
 
 .wrapper-central {
