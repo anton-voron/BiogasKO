@@ -44,7 +44,10 @@ html {
   font-family: neon;
   src: url(../Neon.otf);
 }
-
+@font-face {
+  font-family: neon-2;
+  src: url(../neon.ttf);
+}
 .website-title {
     font-family: neon;
     text-align: center;
@@ -320,13 +323,15 @@ html {
 
 .glitch-btn {
   display: inline-block;
-  position: absolute;
-  top: -100px;
-  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 36px;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   color: #afafaf;
+}
+.glitch-gallery-position {
+  position: absolute;
+  top: -100px;
+  left: 50%;
 }
 .glitch-btn .mask {
   position: absolute;
@@ -771,7 +776,14 @@ html {
   }
 }
 
-
+.features {
+    background-color: #eeeeee;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .box {
     padding: 0;
@@ -782,7 +794,7 @@ html {
     color: #afafaf;
 }
 
-.about-us h2{
+.elem-decor {
     color: #afafaf;
 }
 
@@ -791,7 +803,9 @@ html {
     position: relative;
     margin-bottom: 30px;
 }
-
+.elem-deco {
+    color: #afafaf;
+}
 .elem-decor::before {
     content: "";
     position: absolute;
@@ -819,93 +833,159 @@ html {
     font-size: 22px;
 }
 
-.features {
+.drawing-plan {
     background-color: #eeeeee;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: 
 }
 
+.grid-box {
+  text-align: right;
+}
+
+.advance-title{
+    text-align: right;
+}
+
+
+/*@keyframes purpleNeon {
+  from {
+    text-shadow:
+    0 0 6px rgba(119, 0, 255, 0.92),
+    
+    0 0 5px rgba(30,132,242,0.52),
+    
+    0 0 7px rgba(30,132,242,0.78),
+    0 0 8px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(159, 77, 232, 0.98),
+    
+    0 0 5px rgba(30,132,242,0.58),
+    
+    0 0 7px rgba(30,132,242,0.88),
+    0 0 8px rgba(30,132,242,1);
+  }
+}*/
+
+.biogas-advance {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.advance-item {
+    min-height: 100px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    align-items: end;
+}
+.img-circle {
+    background-color: #000000;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 
 .wrapper-central {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 .contact-section {
-    background-color: #eeeeee; /* Used if the image is unavailable */
-    background-size: cover; /* Resize the background image to cover the entire container */
-
-    color: #919aa1;
+    background-color: #1c1c1c;
+    color: #afafaf;
 }
 
-
-
-.wrapper-left{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contact-section h2 {
+    color: #afafaf;
 }
 
-
-
-
-.modal-invisiable {
-    position: fixed; /*Так как наши модалки перекрывают весь контент, задаём им position: fixed;*/
-
-    color: #000000;
+.contacts-details {
+    margin-bottom: 60px;
+}
+.glitch-map-position {
+    margin-left: 20%;
+}
+.map-section {
+    position: fixed;
 
     background-color: #f8f3f0;
-    background-image: url("../img/bg-section.jpg");
-    background-position: 0 0 ;
+    
+    
     background-repeat: repeat;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7); /*Делаем тень 30 пикселей смещаем вниз, 50 пикселей размытие*/
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .modal-map {
     top: 10%;
     left: 50%;
-
-
-    width: 760px;
-    height: 561px;
-    border: 7px solid white; 
-
     transform: translateX(-50%);
-
     display: none;
 }
+
+.modal-map-show {
+    display: block;
+}
+
+
 .modal-map p{
     margin: 0; 
 }
-.modal-map-show {
-    display: block;
-    animation-name: mapbounse;
-    animation-duration: 0.6s;
-}
 
-@keyframes mapbounse {
-    0%      { transform: translateY(-2000px); }
-    70%     { transform: translateY(30px);    }
-    90%     { transform: translateY(-10);     }
-    100%    { transform: translateY(0);       }
-}
-
-.modal-map-overlay { /*ДЕЛАЕМ ЗАТЕМНЕНИЕ ЭКРАНА КОГДА ВЫЗЫВАЕТСЯ МОДАЛКА*/
+.modal-map-overlay { 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
     display: none;
+}
+
+.close-map {
+    position: absolute;
+    top: 0;
+    right: -34px;
+
+    width: 22px;
+    height: 22px;
+
+    font-size: 0; /*Убираем текст внутри кнопки*/
+
+    background-color: transparent; /*задаём прозрачностькнопке*/
+    border: 0;
+
+    cursor: pointer;
+}
+
+.close-map::before,
+.close-map::after{
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 2px;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #00ffb4;
+    
+}
+
+.close-map::before{
+    transform: rotate(45deg);
+}
+.close-map::after{
+    transform: rotate(-45deg);
 }

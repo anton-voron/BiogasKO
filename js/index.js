@@ -122,8 +122,8 @@ console.dir(flipperGallery);
 
 
 let linkMap = document.querySelector(".button-map");
-let popupMap = document.querySelector(".modal-map");
-let closeMap = popupMap.querySelector(".modal-close");
+let popupMap = document.querySelector(".map-section");
+let closeMap = popupMap.querySelector(".close-map");
 let ovelay = document.querySelector(".modal-map-overlay");
 
 linkMap.addEventListener("click", function (evt) {
