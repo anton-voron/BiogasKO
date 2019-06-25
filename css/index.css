@@ -56,7 +56,7 @@ html {
     height: 100vh;
     letter-spacing: 1px;
     background: url('../img/sandro-katalina-457230-unsplash.jpg') 50% 50%  fixed;
-    background-color: #cccccc; /* Used if the image is unavailable */
+    background-color: #7e2bc7; /* Used if the image is unavailable */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
 
